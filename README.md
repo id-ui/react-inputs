@@ -19,8 +19,8 @@ yarn add @idui/react-inputs
 
 ### TextInput
 
-- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/text-input--playground)
-- [Playground](https://id-ui.github.io/react-inputs/?path=/story/text-input--playground)
+- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/textinput--playground)
+- [Playground](https://id-ui.github.io/react-inputs/?path=/story/textinput--playground)
 
 ```jsx
 import React from 'react'
@@ -51,8 +51,8 @@ function Example() {
 
 ### NumberInput
 
-- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/number-input--playground)
-- [Playground](https://id-ui.github.io/react-inputs/?path=/story/number-input--playground)
+- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/numberinput--playground)
+- [Playground](https://id-ui.github.io/react-inputs/?path=/story/numberinput--playground)
 
 ```jsx
 import React from 'react'
@@ -101,8 +101,8 @@ function Example({ value: providedValue, onChange  }) {
 
 ### SearchInput
 
-- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/search-input--playground)
-- [Playground](https://id-ui.github.io/react-inputs/?path=/story/search-input--playground)
+- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/searchinput--playground)
+- [Playground](https://id-ui.github.io/react-inputs/?path=/story/searchinput--playground)
 
 ```jsx
 import React from 'react'
@@ -151,8 +151,8 @@ function Example({ value: providedValue, onSearch  }) {
 
 ### TagInput
 
-- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/tag-input--playground)
-- [Playground](https://id-ui.github.io/react-inputs/?path=/story/tag-input--playground)
+- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/taginput--playground)
+- [Playground](https://id-ui.github.io/react-inputs/?path=/story/taginput--playground)
 
 ```jsx
 import React from 'react'
@@ -178,8 +178,8 @@ function Example() {
 
 ### Input
 
-- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/input--playground)
-- [Playground](https://id-ui.github.io/react-inputs/?path=/story/input--playground)
+- [Docs](https://id-ui.github.io/react-inputs/?path=/docs/input--example)
+- [Playground](https://id-ui.github.io/react-inputs/?path=/story/input--example)
 
 ```jsx
 import React from 'react'
