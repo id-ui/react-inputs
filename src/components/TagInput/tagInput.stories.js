@@ -73,11 +73,11 @@ const customColors = {
 };
 
 const StyledTagInput = styled(TagInput)`
-  min-height: 5rem;
-  padding: 1.2rem 1rem;
-  border-radius: 1.5rem;
-  width: 50rem;
-  font-size: 1.6rem;
+  min-height: 50px;
+  padding: 12px 10px;
+  border-radius: 15px;
+  width: 500px;
+  font-size: 16px;
 `;
 
 export function StylingExample({ onChange, value: providedValue, ...props }) {

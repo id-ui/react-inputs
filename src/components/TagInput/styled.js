@@ -9,7 +9,7 @@ export const Container = styled(TextInput)`
 
   ${Control} {
     flex: auto;
-    min-width: 2rem;
+    min-width: 20px;
     width: auto;
   }
 

@@ -78,7 +78,7 @@ function TextInput(
         color={colors.default.border}
         hoverColor={colors.focused.border}
         cursor="pointer"
-        size="1.2rem"
+        size="12px"
         onClick={handleClear}
       />
     </Addon>

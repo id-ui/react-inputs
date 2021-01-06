@@ -17,7 +17,7 @@ function SearchInput(
       name="search"
       color={colors.default.border}
       hoverColor={colors.focused.border}
-      size="1.6rem"
+      size="16px"
     />
   );
 
