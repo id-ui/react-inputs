@@ -22,6 +22,9 @@ yarn add @idui/react-inputs
 - [Docs](https://id-ui.github.io/react-inputs/?path=/docs/textinput--playground)
 - [Playground](https://id-ui.github.io/react-inputs/?path=/story/textinput--playground)
 
+
+- For using mask add props from [react-input-mask](https://www.npmjs.com/package/react-input-mask/v/3.0.0-alpha.2)
+
 ```jsx
 import React from 'react'
 import { TextInput } from '@idui/react-inputs'

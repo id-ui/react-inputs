@@ -1178,10 +1178,10 @@
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
-"@idui/react-icon@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@idui/react-icon/-/react-icon-1.0.1.tgz#158adbddffc57bc6c8880efc93def490dbab98e8"
-  integrity sha512-VrDA6CremxIIcdSdce7La2Cl+jKWQiLhRZ1X9hb0XjQUICwzyEFaD12GXlKoLdUIq2Ox+a7gpiTYTjMZ0sqfng==
+"@idui/react-icon@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@idui/react-icon/-/react-icon-1.0.2.tgz#10d65d2ad78704234f6a33ba7b55beeca3e7fedf"
+  integrity sha512-sdH1665jcVMP2ds4XUpmLi/RI38X/GsuuQ5qVZPYp5sKUungGdtIKl268P3da7yggfH1YoHgWq6gvmql46PmkA==
   dependencies:
     prop-types "^15.7.2"
     styled-components "^5.2.1"
@@ -10689,13 +10689,14 @@ react-hotkeys@2.0.0:
   dependencies:
     prop-types "^15.6.1"
 
-react-input-mask@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-2.0.4.tgz#9ade5cf8196f4a856dbf010820fe75a795f3eb14"
-  integrity sha512-1hwzMr/aO9tXfiroiVCx5EtKohKwLk/NT8QlJXHQ4N+yJJFyUuMT+zfTpLBwX/lK3PkuMlievIffncpMZ3HGRQ==
+react-input-mask@^3.0.0-alpha.2:
+  version "3.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-3.0.0-alpha.2.tgz#113102942a557edc7a192e66020b8ce1ba699a5c"
+  integrity sha512-9U7qL+mvDMOJcbOFPdt6Vj+zzmCMNnBjhhjGDrL8BGQmymgvMVKhu/oOVfAkl+5VWOsLr+G3EhZOmae5fBcAkA==
   dependencies:
     invariant "^2.2.4"
-    warning "^4.0.2"
+    prop-types "^15.7.2"
+    warning "^4.0.3"
 
 react-inspector@^5.0.1:
   version "5.1.0"

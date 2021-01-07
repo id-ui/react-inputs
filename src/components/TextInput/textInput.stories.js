@@ -86,7 +86,11 @@ export default {
     },
     mask: {
       control: 'text',
-      description: 'input mask (react-input-mask)',
+      description: 'react-input-mask mask',
+    },
+    maskPlaceholder: {
+      control: 'text',
+      description: 'react-input-mask maskPlaceholder',
     },
     leftAddon: {
       disable: true,
@@ -231,6 +235,39 @@ export function StylingExample({
       onChange={handleChange}
       onClear={undefined}
       colors={customColors}
+    />
+  );
+}
+
+export function MaskExample({
+  value: providedValue,
+  onChange,
+  onlyValue,
+  ...props
+}) {
+  const [value, setValue] = useState(providedValue);
+
+  useEffect(() => {
+    setValue(providedValue);
+  }, [providedValue]);
+
+  const handleChange = useCallback(
+    (e) => {
+      setValue(onlyValue ? e : e.target.value);
+      onChange(e);
+    },
+    [onChange, onlyValue]
+  );
+
+  return (
+    <TextInput
+      {...props}
+      value={value}
+      onChange={handleChange}
+      onClear={undefined}
+      mask="99/99/9999"
+      maskPlaceholder="DD/MM/YYYY"
+      placeholder="DD/MM/YYYY"
     />
   );
 }

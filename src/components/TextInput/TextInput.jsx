@@ -140,6 +140,7 @@ TextInputWithRef.propTypes = {
   isClearIconShown: PropTypes.func,
   clearIconPlacement: PropTypes.oneOf(['right', 'left']),
   mask: PropTypes.string,
+  maskPlaceholder: PropTypes.string,
   leftAddon: PropTypes.any,
   rightAddon: PropTypes.any,
   className: PropTypes.string,

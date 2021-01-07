@@ -1,6 +1,6 @@
 {
   "name": "@idui/react-inputs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Input Component",
   "author": "kaprisa57@gmail.com",
   "license": "MIT",
@@ -84,7 +84,7 @@
     "@idui/react-icon": "^1.0.2",
     "lodash": "^4.17.20",
     "prop-types": "^15.7.2",
-    "react-input-mask": "^2.0.4",
+    "react-input-mask": "^3.0.0-alpha.2",
     "styled-components": "^5.2.1",
     "styled-tools": "^1.7.2"
   },
