@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import MaskInput from 'react-input-mask';
+import MaskInput from '@idui/react-mask-input';
 import Icon from '@idui/react-icon';
 import dispatchEvent from 'helpers/dispatchEvent';
 import getInputState from 'helpers/getInputState';
@@ -13,7 +13,7 @@ function TextInput(
   {
     value,
     onChange,
-    onlyValue,
+    onlyValue: providedOnlyValue,
     mask,
     disabled,
     hasError,
@@ -37,9 +37,14 @@ function TextInput(
     inputRef = ref;
   }
 
+  const onlyValue = useMemo(() => providedOnlyValue || Boolean(mask), [
+    providedOnlyValue,
+    mask,
+  ]);
+
   const handleChange = useCallback(
     (e) => {
-      let newValue = e.target.value;
+      let newValue = mask ? e : e.target.value;
       if (maxlength) {
         newValue = newValue.substring(0, maxlength);
       }
@@ -50,7 +55,7 @@ function TextInput(
         onChange(e);
       }
     },
-    [onlyValue, onChange, maxlength]
+    [mask, onlyValue, onChange, maxlength]
   );
 
   const handleClear = useCallback(() => {

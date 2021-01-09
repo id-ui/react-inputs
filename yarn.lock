@@ -1187,6 +1187,15 @@
     styled-components "^5.2.1"
     styled-tools "^1.7.2"
 
+"@idui/react-mask-input@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@idui/react-mask-input/-/react-mask-input-1.0.2.tgz#79711f482095d2d8d4f00c44ce8bca97f9509f58"
+  integrity sha512-7cBC5QSk0/bZXkYvH0Hfj1kro+qboYRIyfr+c/bTR8nEIDsNkzG5TUdpp+BZaFiFc+b3wKv/Dv1FVhTgHXWRtw==
+  dependencies:
+    prop-types "^15.7.2"
+    styled-components "^5.2.1"
+    styled-tools "^1.7.2"
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -10688,15 +10697,6 @@ react-hotkeys@2.0.0:
   integrity sha512-3n3OU8vLX/pfcJrR3xJ1zlww6KS1kEJt0Whxc4FiGV+MJrQ1mYSYI3qS/11d2MJDFm8IhOXMTFQirfu6AVOF6Q==
   dependencies:
     prop-types "^15.6.1"
-
-react-input-mask@^3.0.0-alpha.2:
-  version "3.0.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/react-input-mask/-/react-input-mask-3.0.0-alpha.2.tgz#113102942a557edc7a192e66020b8ce1ba699a5c"
-  integrity sha512-9U7qL+mvDMOJcbOFPdt6Vj+zzmCMNnBjhhjGDrL8BGQmymgvMVKhu/oOVfAkl+5VWOsLr+G3EhZOmae5fBcAkA==
-  dependencies:
-    invariant "^2.2.4"
-    prop-types "^15.7.2"
-    warning "^4.0.3"
 
 react-inspector@^5.0.1:
   version "5.1.0"

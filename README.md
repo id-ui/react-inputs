@@ -23,7 +23,7 @@ yarn add @idui/react-inputs
 - [Playground](https://id-ui.github.io/react-inputs/?path=/story/textinput--playground)
 
 
-- For using mask add props from [react-input-mask](https://www.npmjs.com/package/react-input-mask/v/3.0.0-alpha.2)
+- For using mask add props (all props supported) from [@idui/react-mask-input](https://www.npmjs.com/package/@idui/react-mask-input)
 
 ```jsx
 import React from 'react'
@@ -45,8 +45,9 @@ function Example() {
             leftAddon={<AnotherIcon />}
             disabled={false}
             hasError={false}
-            
-            mask="+7 (999) 999-99-99" // See react-input-mask, undefined by default
+
+            mask="+7 (999)-999-99-99"// See @idui/react-mask-input mask, undefined by default
+            maskPlaceholder="+7 (___)-___-__-__" // See @idui/react-mask-input maskPlaceholder
         />
     );
 }

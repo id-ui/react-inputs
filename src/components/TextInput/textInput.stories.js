@@ -18,7 +18,8 @@ export default {
     },
     onlyValue: {
       control: 'boolean',
-      description: 'call onChange with input value instead of whole Event',
+      description:
+        'call onChange with input value instead of whole Event. If mask provided then onlyValue would be true',
       defaultValue: true,
       table: {
         defaultValue: { summary: 'true' },
@@ -86,11 +87,11 @@ export default {
     },
     mask: {
       control: 'text',
-      description: 'react-input-mask mask',
+      description: '@idui/react-mask-input mask',
     },
     maskPlaceholder: {
       control: 'text',
-      description: 'react-input-mask maskPlaceholder',
+      description: '@idui/react-mask-input maskPlaceholder',
     },
     leftAddon: {
       disable: true,
@@ -239,12 +240,7 @@ export function StylingExample({
   );
 }
 
-export function MaskExample({
-  value: providedValue,
-  onChange,
-  onlyValue,
-  ...props
-}) {
+export function MaskExample({ value: providedValue, onChange, ...props }) {
   const [value, setValue] = useState(providedValue);
 
   useEffect(() => {
@@ -252,11 +248,11 @@ export function MaskExample({
   }, [providedValue]);
 
   const handleChange = useCallback(
-    (e) => {
-      setValue(onlyValue ? e : e.target.value);
-      onChange(e);
+    (newValue) => {
+      setValue(newValue);
+      onChange(newValue);
     },
-    [onChange, onlyValue]
+    [onChange]
   );
 
   return (
@@ -265,9 +261,9 @@ export function MaskExample({
       value={value}
       onChange={handleChange}
       onClear={undefined}
-      mask="99/99/9999"
-      maskPlaceholder="DD/MM/YYYY"
-      placeholder="DD/MM/YYYY"
+      mask="+7 (999)-999-99-99"
+      maskPlaceholder="+7 (___)-___-__-__"
+      placeholder="Your Phone"
     />
   );
 }

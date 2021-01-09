@@ -14,7 +14,7 @@ module.exports = {
     'prop-types',
     'styled-components',
     'styled-tools',
-    'react-input-mask',
+    '@idui/react-mask-input',
     'lodash',
   ],
   module: {

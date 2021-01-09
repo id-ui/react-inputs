@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, waitFor } from '@testing-library/react';
 import user from '@testing-library/user-event';
 import { axe } from 'jest-axe';
 import { TextInput } from 'components/TextInput';
@@ -50,24 +50,24 @@ describe('TextInput', () => {
     expect(handleChange).toHaveBeenCalledWith(expect.any(Object));
   });
 
-  it('mask', () => {
+  it('mask', async () => {
     const handleChange = jest.fn();
     const { getByTestId } = render(
       <TextInput
         onChange={handleChange}
         data-testid="input"
-        mask="+7 (999) 999-99-99"
+        mask="+7 (999)-999-99-99"
+        maskPlaceholder="+7 (___)-___-__-__"
       />
     );
 
     const input = getByTestId('input');
-    user.type(input, '1');
+    user.type(input, '8991991919');
 
-    expect(handleChange).toHaveBeenCalledTimes(2);
-    expect(handleChange.mock.calls).toEqual([
-      ['+7 (___) ___-__-__'],
-      ['+7 (1__) ___-__-__'],
-    ]);
+    await waitFor(() => {
+      expect(handleChange).toHaveBeenCalledTimes(1);
+      expect(handleChange).toHaveBeenCalledWith('+7 (899)-199-19-19');
+    });
   });
 
   it('clears value and sets focus to input', async () => {
