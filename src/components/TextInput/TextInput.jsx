@@ -58,18 +58,26 @@ function TextInput(
     [mask, onlyValue, onChange, maxlength]
   );
 
-  const handleClear = useCallback(() => {
-    if (onClear) {
-      return onClear();
-    }
-    if (onlyValue) {
-      onChange('');
-    } else {
-      inputRef.current.value = '';
-      dispatchEvent(inputRef.current, 'change');
-    }
-    inputRef.current.focus();
-  }, [onlyValue, onClear, onChange]);
+  const handleClear = useCallback(
+    (e) => {
+      e.stopPropagation();
+      e.nativeEvent.stopImmediatePropagation();
+
+      if (onClear) {
+        return onClear();
+      }
+
+      if (onlyValue) {
+        onChange('');
+      } else {
+        inputRef.current.value = '';
+        dispatchEvent(inputRef.current, 'change');
+      }
+
+      inputRef.current.focus();
+    },
+    [onlyValue, onClear, onChange]
+  );
 
   const showClearIndicator =
     !disabled && isClearable && isClearIconShown(value);
