@@ -64,6 +64,7 @@ export const AddonsWrapper = styled.div`
     }
   }
   &:last-child {
+    margin-left: auto;
     ${Addon}:not(:first-child) {
       padding-left: 0;
     }
