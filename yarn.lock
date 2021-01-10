@@ -1187,10 +1187,10 @@
     styled-components "^5.2.1"
     styled-tools "^1.7.2"
 
-"@idui/react-mask-input@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@idui/react-mask-input/-/react-mask-input-1.0.2.tgz#79711f482095d2d8d4f00c44ce8bca97f9509f58"
-  integrity sha512-7cBC5QSk0/bZXkYvH0Hfj1kro+qboYRIyfr+c/bTR8nEIDsNkzG5TUdpp+BZaFiFc+b3wKv/Dv1FVhTgHXWRtw==
+"@idui/react-mask-input@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@idui/react-mask-input/-/react-mask-input-1.0.4.tgz#b0834a14dda5d5eee4873075f79c2bc38ccfde3f"
+  integrity sha512-PXu695/XtHfg0ADqmjPNV77UKsPRiXR9Byk5rCVnEJWp2bAdB44+/2Eo0DalMUBl5z3CjMRb9lIsx/i0j+mtMQ==
   dependencies:
     prop-types "^15.7.2"
     styled-components "^5.2.1"
