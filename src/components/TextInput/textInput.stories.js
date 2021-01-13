@@ -87,11 +87,8 @@ export default {
     },
     mask: {
       control: 'text',
-      description: '@idui/react-mask-input mask',
-    },
-    maskPlaceholder: {
-      control: 'text',
-      description: '@idui/react-mask-input maskPlaceholder',
+      description:
+        '@idui/react-mask-input mask. If specified you can provide other props from @idui/react-mask-input',
     },
     leftAddon: {
       disable: true,
