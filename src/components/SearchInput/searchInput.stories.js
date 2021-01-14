@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import _ from 'lodash';
-import { withPropsTable } from 'storybook-addon-react-docgen';
 import textInputStory from 'components/TextInput/textInput.stories';
 import SearchInput from './SearchInput';
 
@@ -33,12 +32,6 @@ export default {
       },
     },
     ..._.omit(textInputStory.argTypes, ['type']),
-  },
-  decorators: [withPropsTable],
-  parameters: {
-    props: {
-      propTablesInclude: [SearchInput],
-    },
   },
 };
 

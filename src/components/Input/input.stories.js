@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { withPropsTable } from 'storybook-addon-react-docgen';
 import Input from './Input';
 import { TYPES } from './constants';
 
@@ -14,12 +13,6 @@ export default {
       table: {
         defaultValue: { summary: 'text' },
       },
-    },
-  },
-  decorators: [withPropsTable],
-  parameters: {
-    props: {
-      propTablesInclude: [Input],
     },
   },
 };

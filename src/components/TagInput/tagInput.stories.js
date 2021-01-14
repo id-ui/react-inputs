@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { withPropsTable } from 'storybook-addon-react-docgen';
 import textInputStory from 'components/TextInput/textInput.stories';
 import styled from 'styled-components';
 import TagInput from './TagInput';
@@ -16,12 +15,6 @@ export default {
       table: {
         defaultValue: { summary: '[]' },
       },
-    },
-  },
-  decorators: [withPropsTable],
-  parameters: {
-    props: {
-      propTablesInclude: [TagInput],
     },
   },
 };

@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { withPropsTable } from 'storybook-addon-react-docgen';
 import { TYPES } from './constants';
 import TextInput from './TextInput';
 
@@ -59,7 +58,7 @@ export default {
     },
     isClearable: {
       control: 'boolean',
-      description: 'whether user can clear TextInput or not',
+      description: 'whether user can clear input or not',
       defaultValue: true,
       table: {
         defaultValue: { summary: 'true' },
@@ -127,17 +126,11 @@ export default {
     },
     autoFocus: {
       control: 'boolean',
-      description: 'set focus on init',
+      description: 'whether set focus on init or not',
     },
     maxlength: {
       control: 'boolean',
       description: 'max value length',
-    },
-  },
-  decorators: [withPropsTable],
-  parameters: {
-    props: {
-      propTablesInclude: [TextInput],
     },
   },
 };

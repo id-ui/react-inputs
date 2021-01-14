@@ -140,7 +140,7 @@ const colorSetShape = PropTypes.shape({
 });
 
 TextInputWithRef.propTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.string,
   onChange: PropTypes.func,
   onClear: PropTypes.func,
   type: PropTypes.oneOf(Object.keys(TYPES)),

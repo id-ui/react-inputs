@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import _ from 'lodash';
-import { withPropsTable } from 'storybook-addon-react-docgen';
 import textInputStory from 'components/TextInput/textInput.stories';
 import NumberInput from './NumberInput';
 
@@ -30,12 +29,6 @@ export default {
       description: 'minimum input value',
     },
     ..._.omit(textInputStory.argTypes, ['type']),
-  },
-  decorators: [withPropsTable],
-  parameters: {
-    props: {
-      propTablesInclude: [NumberInput],
-    },
   },
 };
 
