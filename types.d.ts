@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {MaskInputProps} from "@idui/react-mask-input";
 
 export interface InputStateColorsSet {
     border?: string;
@@ -15,7 +16,7 @@ export interface InputColors {
     focused?: InputStateColorsSet;
 }
 
-export interface CommonInputProps {
+export interface CommonInputProps extends MaskInputProps {
     /**
      * onChange input handler
      */
@@ -178,6 +179,10 @@ export class SearchInput extends React.Component<SearchInputProps> {}
 
 
 export interface TagInputProps extends CommonInputProps {
+    /**
+     * onChange TagInput handler
+     */
+    onChange?: (value: string[]) => void;
      /**
      * input type
      * @default 'text'

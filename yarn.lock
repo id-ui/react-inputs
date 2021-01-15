@@ -1178,19 +1178,19 @@
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
-"@idui/react-icon@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@idui/react-icon/-/react-icon-1.0.2.tgz#10d65d2ad78704234f6a33ba7b55beeca3e7fedf"
-  integrity sha512-sdH1665jcVMP2ds4XUpmLi/RI38X/GsuuQ5qVZPYp5sKUungGdtIKl268P3da7yggfH1YoHgWq6gvmql46PmkA==
+"@idui/react-icon@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@idui/react-icon/-/react-icon-1.0.4.tgz#c17664e947665ab2b144fb426143f02b4554972b"
+  integrity sha512-61SbuFCj11apc821+pijk+eoq8+XVT+w+pBbKVtd8btkdYvOR53e3yyXERxBg53HBpHYB0BZXB+Vg4BWJVvxqw==
   dependencies:
     prop-types "^15.7.2"
     styled-components "^5.2.1"
     styled-tools "^1.7.2"
 
-"@idui/react-mask-input@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@idui/react-mask-input/-/react-mask-input-1.1.1.tgz#11c95d2c592f34e988972a3490df210f06344b5f"
-  integrity sha512-Zk8GB6TGf4Df/DyP+dUMg3kyVWUS+eHl7CvXndSYr1ChOCP4PGNmSv9WxdrPEW1MVqdPlJC5YxJlW7vZXJsaMQ==
+"@idui/react-mask-input@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@idui/react-mask-input/-/react-mask-input-1.1.2.tgz#902314e373ee7b7578e699e85d9b06cfaa5ea2b9"
+  integrity sha512-rZMOVN8v72UYPH7Dq8ZnF3U/+8KD+JNjV3/5nTyPpuBQ0ZFzAqOWlXNcIme4FmSbdMo2WRLEYhcK3WD4nkB5KQ==
   dependencies:
     prop-types "^15.7.2"
     styled-components "^5.2.1"
