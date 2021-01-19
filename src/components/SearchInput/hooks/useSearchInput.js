@@ -20,9 +20,9 @@ export default ({
 
   const handleChange = useCallback(
     (e) => {
-      const { value: newValue } = e.target;
+      const newValue = onlyValue ? e : e.target.value;
       setValue(newValue);
-      onChangeDebounced(onlyValue ? newValue : e);
+      onChangeDebounced(e);
     },
     [onChangeDebounced, onlyValue]
   );

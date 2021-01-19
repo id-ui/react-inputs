@@ -1,7 +1,10 @@
 {
   "plugins": [
-    ["babel-plugin-styled-components", {
-      "namespace": "idui-inputs"
-    }]
+    [
+      "babel-plugin-styled-components",
+      {
+        "namespace": "idui-inputs"
+      }
+    ]
   ]
 }

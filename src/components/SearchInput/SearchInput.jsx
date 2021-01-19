@@ -26,7 +26,6 @@ function SearchInput(
       {...props}
       {...searchInputProps}
       ref={ref}
-      onlyValue={false}
       type="text"
       rightAddon={rightAddon || (searchIconPlacement === 'right' && searchIcon)}
       leftAddon={leftAddon || (searchIconPlacement === 'left' && searchIcon)}
