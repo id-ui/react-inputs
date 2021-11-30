@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import getInputState from 'helpers/getInputState';
@@ -16,29 +16,26 @@ function TagInput({
 }) {
   const [inputValue, setInputValue] = useState('');
 
-  const handleKeyDown = useCallback(
-    (e) => {
-      // Enter
-      if (e.keyCode === 13) {
-        e.preventDefault();
-        if (e.target.value) {
-          onChange(_.uniq([...value, e.target.value]));
-          setInputValue('');
-        }
-        // Backspace, Delete
-      } else if ([8, 46].includes(e.keyCode) && !e.target.value) {
-        onChange(value.slice(0, value.length - 1));
+  const handleKeyDown = (e) => {
+    // Enter
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      if (e.target.value) {
+        onChange(_.uniq([...value, e.target.value]));
+        setInputValue('');
       }
-    },
-    [onChange, value]
-  );
+      // Backspace, Delete
+    } else if ([8, 46].includes(e.keyCode) && !e.target.value) {
+      onChange(value.slice(0, value.length - 1));
+    }
+  };
 
-  const handleClear = useCallback(() => {
+  const handleClear = () => {
     setInputValue('');
     onChange([]);
-  }, [onChange]);
+  };
 
-  const isClearIconShown = useCallback(() => value.length > 0, [value]);
+  const isClearIconShown = () => value.length > 0;
 
   return (
     <Container

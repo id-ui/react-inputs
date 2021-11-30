@@ -18,14 +18,11 @@ export default ({
     searchTimeout,
   ]);
 
-  const handleChange = useCallback(
-    (e) => {
-      const newValue = onlyValue ? e : e.target.value;
-      setValue(newValue);
-      onChangeDebounced(e);
-    },
-    [onChangeDebounced, onlyValue]
-  );
+  const handleChange = (e) => {
+    const newValue = onlyValue ? e : e.target.value;
+    setValue(newValue);
+    onChangeDebounced(e);
+  };
 
   return {
     value,

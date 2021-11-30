@@ -1,13 +1,10 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { RemoveIcon, Tag } from './styled';
 
 function Tags({ value, className, onChange }) {
-  const handleDeleteTag = useCallback(
-    (index) => () => {
-      onChange(value.filter((item, itemIndex) => itemIndex !== index));
-    },
-    [onChange, value]
-  );
+  const handleDeleteTag = (index) => () => {
+    onChange(value.filter((item, itemIndex) => itemIndex !== index));
+  };
 
   return (
     <div className={className}>

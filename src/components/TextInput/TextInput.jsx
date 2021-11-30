@@ -37,47 +37,38 @@ function TextInput(
     inputRef = ref;
   }
 
-  const onlyValue = useMemo(() => providedOnlyValue || Boolean(mask), [
-    providedOnlyValue,
-    mask,
-  ]);
+  const onlyValue = providedOnlyValue || Boolean(mask);
 
-  const handleChange = useCallback(
-    (e) => {
-      let newValue = mask ? e : e.target.value;
-      if (maxlength) {
-        newValue = newValue.substring(0, maxlength);
-      }
-      if (onlyValue) {
-        onChange(newValue);
-      } else {
-        e.target.value = newValue;
-        onChange(e);
-      }
-    },
-    [mask, onlyValue, onChange, maxlength]
-  );
+  const handleChange = (e) => {
+    let newValue = mask ? e : e.target.value;
+    if (maxlength) {
+      newValue = newValue.substring(0, maxlength);
+    }
+    if (onlyValue) {
+      onChange(newValue);
+    } else {
+      e.target.value = newValue;
+      onChange(e);
+    }
+  };
 
-  const handleClear = useCallback(
-    (e) => {
-      e.stopPropagation();
-      e.nativeEvent.stopImmediatePropagation();
+  const handleClear = (e) => {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
 
-      if (onClear) {
-        return onClear();
-      }
+    if (onClear) {
+      return onClear();
+    }
 
-      if (onlyValue) {
-        onChange('');
-      } else {
-        inputRef.current.value = '';
-        dispatchEvent(inputRef.current, 'change');
-      }
+    if (onlyValue) {
+      onChange('');
+    } else {
+      inputRef.current.value = '';
+      dispatchEvent(inputRef.current, 'change');
+    }
 
-      inputRef.current.focus();
-    },
-    [onlyValue, onClear, onChange]
-  );
+    inputRef.current.focus();
+  };
 
   const showClearIndicator =
     !disabled && isClearable && isClearIconShown(value);
