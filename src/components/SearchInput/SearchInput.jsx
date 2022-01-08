@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import { omit } from 'lodash';
 import { TextInput } from 'components/TextInput';
 import { colors } from 'theme';
 import Icon from '@idui/react-icon';
@@ -36,14 +36,14 @@ function SearchInput(
 const SearchInputWithRef = React.forwardRef(SearchInput);
 
 SearchInputWithRef.propTypes = {
-  ..._.omit(TextInput.propTypes, ['type']),
+  ...omit(TextInput.propTypes, ['type']),
   searchTimeout: PropTypes.number,
   showSearchIcon: PropTypes.bool,
   searchIconPlacement: PropTypes.oneOf(['right', 'left']),
 };
 
 SearchInputWithRef.defaultProps = {
-  ..._.omit(TextInput.defaultProps, ['type']),
+  ...omit(TextInput.defaultProps, ['type']),
   searchTimeout: 300,
   showSearchIcon: true,
   searchIconPlacement: 'left',

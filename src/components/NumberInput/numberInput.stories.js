@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import _ from 'lodash';
+import { omit } from 'lodash';
 import textInputStory from 'components/TextInput/textInput.stories';
 import NumberInput from './NumberInput';
 
@@ -28,7 +28,7 @@ export default {
       control: 'number',
       description: 'minimum input value',
     },
-    ..._.omit(textInputStory.argTypes, ['type']),
+    ...omit(textInputStory.argTypes, ['type']),
   },
 };
 

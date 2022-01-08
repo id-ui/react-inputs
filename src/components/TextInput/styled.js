@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import _ from 'lodash';
+import { get } from 'lodash';
 import { ifProp, prop, withProp } from 'styled-tools';
 
 export const Control = styled.input`
@@ -21,12 +21,12 @@ export const Container = styled.div`
   ${withProp(
     ['state', 'colors'],
     (state, colors) => css`
-      border: 1px solid ${_.get(colors, [state, 'border'], 'inherit')};
-      color: ${_.get(colors, [state, 'color'], 'inherit')};
-      background-color: ${_.get(colors, [state, 'background'], 'inherit')};
+      border: 1px solid ${get(colors, [state, 'border'], 'inherit')};
+      color: ${get(colors, [state, 'color'], 'inherit')};
+      background-color: ${get(colors, [state, 'background'], 'inherit')};
       ${Control} {
         &::placeholder {
-          color: ${_.get(
+          color: ${get(
             colors,
             [state, 'placeholder'],
             colors.default.placeholder || 'inherit'

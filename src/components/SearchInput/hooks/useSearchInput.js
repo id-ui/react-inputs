@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import _ from 'lodash';
+import { useEffect, useMemo, useState } from 'react';
+import { debounce } from 'lodash';
 
 export default ({
   value: providedValue,
@@ -13,7 +13,7 @@ export default ({
     setValue(providedValue || '');
   }, [providedValue]);
 
-  const onChangeDebounced = useMemo(() => _.debounce(onChange, searchTimeout), [
+  const onChangeDebounced = useMemo(() => debounce(onChange, searchTimeout), [
     onChange,
     searchTimeout,
   ]);

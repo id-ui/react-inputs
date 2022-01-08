@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import _ from 'lodash';
+import { omit } from 'lodash';
 import textInputStory from 'components/TextInput/textInput.stories';
 import SearchInput from './SearchInput';
 
@@ -31,7 +31,7 @@ export default {
         defaultValue: { summary: 'left' },
       },
     },
-    ..._.omit(textInputStory.argTypes, ['type']),
+    ...omit(textInputStory.argTypes, ['type']),
   },
 };
 

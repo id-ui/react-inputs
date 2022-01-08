@@ -1,5 +1,4 @@
-import React, { useCallback, useMemo, useRef } from 'react';
-import _ from 'lodash';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import MaskInput from '@idui/react-mask-input';
 import Icon from '@idui/react-icon';
@@ -164,7 +163,7 @@ TextInputWithRef.propTypes = {
 };
 
 TextInputWithRef.defaultProps = {
-  onChange: _.noop,
+  onChange: () => {},
   onlyValue: true,
   type: 'text',
   isClearable: true,

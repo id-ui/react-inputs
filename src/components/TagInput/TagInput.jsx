@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import { uniq } from 'lodash';
 import getInputState from 'helpers/getInputState';
 import { TextInput } from 'components/TextInput';
 import Tags from './components/Tags';
@@ -21,7 +21,7 @@ function TagInput({
     if (e.keyCode === 13) {
       e.preventDefault();
       if (e.target.value) {
-        onChange(_.uniq([...value, e.target.value]));
+        onChange(uniq([...value, e.target.value]));
         setInputValue('');
       }
       // Backspace, Delete

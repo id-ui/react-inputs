@@ -1,7 +1,7 @@
-import _ from 'lodash';
+import { isNumber } from 'lodash';
 
 export const round = (value, countOfDigitsAfterPoint) =>
-  _.isNumber(countOfDigitsAfterPoint)
+  isNumber(countOfDigitsAfterPoint)
     ? Math.round(parseFloat(value) * 10 ** countOfDigitsAfterPoint) /
       10 ** countOfDigitsAfterPoint
     : value;

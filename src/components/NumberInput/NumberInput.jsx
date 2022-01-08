@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TextInput } from 'components/TextInput';
-import _ from 'lodash';
+import { omit } from 'lodash';
 import { useNumberInput } from './hooks';
 
 function NumberInput(props, ref) {
@@ -21,7 +21,7 @@ function NumberInput(props, ref) {
 const NumberInputWithRef = React.forwardRef(NumberInput);
 
 NumberInputWithRef.propTypes = {
-  ..._.omit(TextInput.propTypes, ['type']),
+  ...omit(TextInput.propTypes, ['type']),
   thousandsSeparator: PropTypes.string,
   countOfDigitsAfterPoint: PropTypes.number,
   max: PropTypes.number,
@@ -29,7 +29,7 @@ NumberInputWithRef.propTypes = {
 };
 
 NumberInputWithRef.defaultProps = {
-  ..._.omit(TextInput.defaultProps, ['type']),
+  ...omit(TextInput.defaultProps, ['type']),
   thousandsSeparator: ' ',
 };
 
