@@ -69,11 +69,11 @@ export default ({
       onChange(e);
     }
 
-    Promise.resolve().then(() => {
+    setTimeout(() => {
       const newSelectionStart =
-        selectionStart + (newInputValue.length - inputValue.length);
+          selectionStart + (newInputValue.length - inputValue.length);
       e.target.setSelectionRange(newSelectionStart, newSelectionStart);
-    });
+    }, 0)
   };
 
   const handleKeyDown = (e) => {
@@ -157,9 +157,9 @@ export default ({
       }
     }
 
-    Promise.resolve().then(() => {
+    setTimeout(() => {
       e.target.setSelectionRange(selectionStart, selectionStart);
-    });
+    }, 0)
   };
 
   return {
